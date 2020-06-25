@@ -17,7 +17,7 @@ namespace WebIdentity.Repositories
                 var credentials = new NetworkCredential()
                 {
                     UserName = "alinouriare", // without @gmail.com
-                    Password = "1366315@liNouri"
+                    Password = "************"
                 };
 
                 client.Credentials = credentials;
