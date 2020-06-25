@@ -1,0 +1,9 @@
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\bin\Debug\netstandard2.0\Config.deps.json
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\bin\Debug\netstandard2.0\Config.dll
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\bin\Debug\netstandard2.0\Config.pdb
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\obj\Debug\netstandard2.0\Config.AssemblyInfoInputs.cache
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\obj\Debug\netstandard2.0\Config.AssemblyInfo.cs
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\obj\Debug\netstandard2.0\Config.dll
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\obj\Debug\netstandard2.0\Config.pdb
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\obj\Debug\netstandard2.0\Config.csproj.CoreCompileInputs.cache
+C:\Users\alino\OneDrive\Desktop\Identity\WebIdentity\Config\obj\Debug\netstandard2.0\Config.csprojAssemblyReference.cache
