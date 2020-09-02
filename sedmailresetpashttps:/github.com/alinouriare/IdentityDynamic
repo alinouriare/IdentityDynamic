@@ -1,0 +1,27 @@
+  public async Task<Result> SendEmail([FromBody]ForgetPasswordModel model)
+        {
+            var regex = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+            if (!regex.IsMatch(model.Email))
+            {
+                return Result.Failure("Your email is not valid");
+            }
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user != null)
+            {
+                var pass = "Aa@123456";
+                string message = "<h2>Dear " + user.FirstName + "  " + user.LastName +
+                    "<p>New Password  : " + pass + "</p>" +
+                    " <br/>";
+
+                await _emailSender.SendEmailAsync(user.Email, "Reset your password", message);
+                var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var result = await _userManager.ResetPasswordAsync(user, code, pass);
+                if (!result.Succeeded)
+                {
+                    return Result.Failure(result.Errors.LastOrDefault().Description);
+                }
+                return Result.Success("Email has been sent");
+            }
+            return Result.Failure("User is not registered with this email");
+
+        }
